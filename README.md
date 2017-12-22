@@ -6,6 +6,13 @@
 
 
 ## 使用方法：
+
+### 安装:
+```
+pip3 install cnfaker
+```
+
+### 示例:
 ```
 import cnfaker
 
@@ -22,8 +29,10 @@ print(cnfaker.name(5))
 * 身份证号：cnfaker.ID()
 * 电话：cnfaker.phone()
 * 用户名：cnfaker.username()
+* 句子：cnfaker.sentence()
+* 段落：cnfaker.pargraph()
 
-todos:
-* 词语
-* 句子
-* 段落
+
+欢迎提issue和PR。
+
+
