@@ -1,16 +1,26 @@
 import linecache
 import random
-from distutils.sysconfig import get_python_lib
+from os import path
+# from distutils.sysconfig import get_python_lib
+#
+#
+# _resource_path = get_python_lib() + '/cnfaker/'
+# _name_file = _resource_path + 'resource/name.txt'
+# _email_file = _resource_path + 'resource/email.txt'
+# _IDcard_file = _resource_path + 'resource/IDcard.txt'
+# _phone_file = _resource_path + 'resource/phone.txt'
+# _username_file = _resource_path + 'resource/username.txt'
+# _address_file = _resource_path + 'resource/address.txt'
+# _sentence_file = 'resource/sentence.txt'
+DATA_DIR = path.abspath(path.join(path.dirname(__file__), 'resource'))
 
-
-_resource_path = get_python_lib() + '/cnfaker/'
-_name_file = _resource_path + 'resource/name.txt'
-_email_file = _resource_path + 'resource/email.txt'
-_IDcard_file = _resource_path + 'resource/IDcard.txt'
-_phone_file = _resource_path + 'resource/phone.txt'
-_username_file = _resource_path + 'resource/username.txt'
-_address_file = _resource_path + 'resource/address.txt'
-_sentence_file = 'resource/sentence.txt'
+_name_file = path.join(DATA_DIR, 'name.txt')
+_email_file = path.join(DATA_DIR, 'email.txt')
+_IDcard_file = path.join(DATA_DIR, 'IDcard.txt')
+_phone_file = path.join(DATA_DIR, 'phone.txt')
+_username_file = path.join(DATA_DIR, 'username.txt')
+_address_file = path.join(DATA_DIR, 'address.txt')
+_sentence_file = path.join(DATA_DIR, 'sentence.txt')
 
 
 def _make_gen(reader):
@@ -70,3 +80,6 @@ def pargraph(num=1):
         tmp = ''.join(list(tmp))
         result.add(tmp)
     return result
+
+
+

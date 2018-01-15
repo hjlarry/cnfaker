@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = 'cnfaker',
-    version = '0.1.6',
+    version = '0.1.7',
     keywords='faker generate chinese words',
     description = 'a library for chinese words or other things filling ',
     license = 'MIT License',
